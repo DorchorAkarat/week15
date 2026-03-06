@@ -9,7 +9,6 @@ from pokemon.pokemons.routes import pokemons_bp
 def create_app():
     app = Flask(__name__)
 
-    # ✅ fallback ถ้าไม่ได้ตั้ง env
     db_url = os.environ.get("DATABASE_URL") or "sqlite:///app.db"
     secret = os.environ.get("SECRET_KEY") or "dev-secret-key"
 
